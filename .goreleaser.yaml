@@ -33,13 +33,6 @@ checksum:
   algorithm: sha256
 signs:
   - artifacts: checksum
-    args:
-      # if you are using this is a GitHub action or some other automated pipeline, you
-      # need to pass the batch flag to indicate its not interactive.
-      - "--batch"
-      - "{{ .Env.GPG_FINGERPRINT }}" # set this environment variable for your signing key
-      - "${signature}"
-      - "${artifact}"
 release:
   # Visit your project's GitHub Releases page to publish this release.
   draft: true
