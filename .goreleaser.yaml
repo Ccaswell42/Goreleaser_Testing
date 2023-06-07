@@ -39,7 +39,6 @@ signs:
       - "--batch"
       - "{{ .Env.GPG_FINGERPRINT }}" # set this environment variable for your signing key
       - "${signature}"
-      - "--detach-sign"
       - "${artifact}"
 release:
   # Visit your project's GitHub Releases page to publish this release.
